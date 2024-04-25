@@ -32,3 +32,5 @@ def get_all_links(base_url):
 
 base_url = "https://home.chungwoon.ac.kr/home/index.do"
 get_all_links(base_url)
+
+
