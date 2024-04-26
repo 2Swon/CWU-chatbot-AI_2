@@ -1,7 +1,6 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import urllib.parse
-import re
 
 def extract_all_links(url, base_url, visited_urls):
     links = set()
