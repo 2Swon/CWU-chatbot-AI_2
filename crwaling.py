@@ -13,7 +13,6 @@ def extract_all_links(url, base_url, visited_urls):
             href = link.get('href')
             full_url = urllib.parse.urljoin(base_url, href)
 
-            # 해당 도메인으로 시작하는지 확인
             if full_url.startswith(base_url) and full_url not in visited_urls:
                 links.add(full_url)
                 visited_urls.add(full_url)
@@ -21,7 +20,6 @@ def extract_all_links(url, base_url, visited_urls):
                 links.update(extract_all_links(full_url, base_url, visited_urls))
 
     except Exception:
-        # 오류 발생 시 무시하고 진행
         pass
 
     return links
